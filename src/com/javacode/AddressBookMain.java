@@ -15,7 +15,7 @@ import java.util.*;
 public class AddressBookMain {
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book Program");
-        Collection <String > list = new LinkedList<String>();
+        LinkedList<String > list = new LinkedList<String>();
         //List list = new ArrayList();
         list.add("Alias");
         list.add("Bean");
@@ -26,6 +26,11 @@ public class AddressBookMain {
         System.out.println("Enter Last Name");
         String lastName = sc.nextLine();
         list.add(lastName);
-        System.out.println("Name:" +list);
+        System.out.println("Edit Names :" );
+        String newName1 = sc.nextLine();
+        String newName2 = sc.nextLine();
+        list.set(2, newName1);
+        list.set(3, newName2);
+        System.out.println("Name: " +list);
     }
 }
